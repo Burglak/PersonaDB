@@ -13,7 +13,7 @@ import java.util.List;
 public class App extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        Person person = new Person("john123", "passwnjjd123", "John Doe", "john@example.com", "standard", 500, 0, 100, 100);
+        Person person = new Person("joh123", "passwnjjd123", "John Doe", "john@example.com", "standard", 500, 0, 100, 100);
         //Persona persona = new Persona("Izanagi", "chariot", 3, 4, 5, 6, 7, 8);
         //PersonPersona personPersona = new PersonPersona(1, 2, 1);
         PersonaAffinity personaAffinity = new PersonaAffinity(2, 2, "weakness");
