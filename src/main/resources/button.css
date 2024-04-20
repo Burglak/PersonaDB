@@ -1,0 +1,23 @@
+.button {
+    -fx-background-color: #0066cc;
+    -fx-text-fill: #ffffff;
+    -fx-padding: 5px 10px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease;
+    -fx-alignment: left;
+}
+
+.buttons:hover {
+    -fx-background-color: #003366;
+}
+
+.buttons:pressed {
+    -fx-background-color: #ff0000;
+}
+
+/* Tylko lewe obramowanie */
+.button {
+    -fx-border-color: transparent transparent transparent #ffffff;
+    -fx-border-width: 0px 0px 0px 2px;
+}
