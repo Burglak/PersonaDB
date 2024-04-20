@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.personadb.controller.LoginPageController">
    <left>
       <AnchorPane prefHeight="500.0" prefWidth="374.0" style="-fx-background-color: #1ab1ed;" BorderPane.alignment="CENTER">
          <children>
@@ -24,25 +24,27 @@
          </children></AnchorPane>
    </left>
    <center>
-      <AnchorPane prefHeight="500.0" prefWidth="326.0" BorderPane.alignment="CENTER">
+      <AnchorPane fx:id="content_area" prefHeight="500.0" prefWidth="320.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField layoutX="69.0" layoutY="167.0" prefHeight="27.0" prefWidth="210.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-color: #1ab1ed; -fx-border-width: 0px 0px 2px 0px;" />
-            <PasswordField layoutX="69.0" layoutY="209.0" prefHeight="27.0" prefWidth="210.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #1ab1ed; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField layoutX="60.0" layoutY="167.0" onAction="#exit" prefHeight="27.0" prefWidth="220.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-color: #1ab1ed; -fx-border-width: 0px 0px 2px 0px;" />
+            <PasswordField layoutX="60.0" layoutY="209.0" prefHeight="27.0" prefWidth="220.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #1ab1ed; -fx-border-width: 0px 0px 2px 0px;" />
             <Label layoutX="57.0" layoutY="53.0" text="PersonaDB">
                <font>
                   <Font name="BM Space A9" size="27.0" />
                </font></Label>
-            <FontAwesomeIcon glyphName="LOCK" layoutX="39.0" layoutY="231.0" size="2em" />
-            <FontAwesomeIcon glyphName="USER" layoutX="38.0" layoutY="189.0" size="2em" />
+            <FontAwesomeIcon glyphName="LOCK" layoutX="31.0" layoutY="231.0" size="2em" />
+            <FontAwesomeIcon glyphName="USER" layoutX="30.0" layoutY="189.0" size="2em" />
             <Button layoutX="114.0" layoutY="296.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="95.0" style="-fx-background-color: #1ab1ed;" text="Login" textFill="WHITE">
                <font>
                   <Font size="15.0" />
                </font>
             </Button>
             <Hyperlink layoutX="176.0" layoutY="250.0" text="Forgot password?" />
-            <Button layoutX="258.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: transparent;" textFill="WHITE" />
-            <FontAwesomeIcon fill="#1ab1ed" glyphName="CLOSE" layoutX="293.0" layoutY="28.0" />
-            <Button layoutX="114.0" layoutY="444.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="95.0" style="-fx-background-color: transparent;" text="Sign up" textFill="#1ab1ed" />
+            <Button layoutX="279.0" layoutY="14.0" mnemonicParsing="false" onAction="#exit" style="-fx-background-color: transparent;" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIcon fill="#1ab1ed" glyphName="CLOSE" />
+               </graphic></Button>
+            <Button layoutX="114.0" layoutY="444.0" mnemonicParsing="false" onAction="#openRegistration" prefHeight="21.0" prefWidth="95.0" style="-fx-background-color: transparent;" text="Sign up" textFill="#1ab1ed" />
          </children></AnchorPane>
    </center>
 </BorderPane>
