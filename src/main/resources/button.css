@@ -1,5 +1,14 @@
+/* Styl dla BorderPane */
+#borderPane {
+    -fx-background-image: url('file:/C:/Users/snipe/Desktop/ProjektBD/PersonaDB/src/main/resources/menu22.gif');
+    -fx-background-size: cover;
+/* -fx-background-size: auto auto; /* Automatyczne dopasowanie rozmiaru obrazu */
+/* -fx-background-repeat: repeat-x;
+/* -fx-background-position: -200px top; /* Początkowy pozycjonowanie obrazu */
+}
+
 .button {
-    -fx-background-color: #0066cc;
+    -fx-background-color: rgba(0, 102, 204, 0.7); /* Kolor tła z alfą */
     -fx-text-fill: #ffffff;
     -fx-padding: 5px 10px;
     -fx-background-radius: 5px;
@@ -8,11 +17,11 @@
     -fx-alignment: left;
 }
 
-.buttons:hover {
-    -fx-background-color: #003366;
+.button:hover {
+    -fx-background-color: rgba(0, 51, 102, 0.7); /* Kolor tła po najechaniu z alfą */
 }
 
-.buttons:pressed {
+.button:pressed {
     -fx-background-color: #ff0000;
 }
 
