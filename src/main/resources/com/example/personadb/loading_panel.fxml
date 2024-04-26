@@ -5,8 +5,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="171.0" prefWidth="300.0" style="-fx-background-color: #1ab1ed;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="171.0" prefWidth="300.0" style="-fx-background-color: #1ab1ed;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.personadb.controller.LoadingPanel">
    <center>
       <AnchorPane prefHeight="156.0" prefWidth="300.0" BorderPane.alignment="CENTER">
          <children>
@@ -15,7 +14,7 @@
                   <Font name="BM space A9" size="36.0" />
                </font>
             </Label>
-            <Label layoutX="187.0" layoutY="133.0" text="loading..." textFill="WHITE">
+            <Label fx:id="loadingLabel" layoutX="187.0" layoutY="133.0" text="loading" textFill="WHITE">
                <font>
                   <Font name="BM space A9" size="18.0" />
                </font>

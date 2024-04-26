@@ -4,8 +4,7 @@ module com.example.personadb {
     requires org.hibernate.orm.core;
     requires jakarta.persistence;
     requires java.naming;
-
-
+    requires com.google.common;
 
 
     opens com.example.personadb to javafx.fxml, org.hibernate.orm.core;
