@@ -29,6 +29,10 @@ public class RegisterPageController {
         Parent root = FXMLLoader.load(getClass().getResource("/com/example/personadb/login_page.fxml"));
         content_area.getScene().setRoot(root);
     }
+    private void openLogin() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/com/example/personadb/login_page.fxml"));
+        content_area.getScene().setRoot(root);
+    }
 
     @FXML
     private void exit(ActionEvent event) {
@@ -36,7 +40,7 @@ public class RegisterPageController {
     }
 
     @FXML
-    private void handleRegistration(ActionEvent event) {
+    private void handleRegistration(ActionEvent event) throws IOException {
         //hashing password
         String sha256hex = Hashing.sha256()
                 .hashString(password.getText(), StandardCharsets.UTF_8)
@@ -51,6 +55,10 @@ public class RegisterPageController {
         person.setBalance(1000);
         person.setRanking(0);
         person.setHp(0);
-        Database.registerPerson(person);
+        person.setAvatar(0);
+        boolean registered = Database.registerPerson(person);
+        if(registered) {
+            openLogin();
+        }
     }
 }

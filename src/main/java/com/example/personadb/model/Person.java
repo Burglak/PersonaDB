@@ -39,6 +39,9 @@ public class Person implements Serializable {
     @Column(name="sp")
     private int sp;
 
+    @Column(name="avatar")
+    private int avatar;
+
     //cascade
     @OneToMany(mappedBy = "person", cascade = CascadeType.ALL)
     private List<PersonPersona> personPersonas;
@@ -46,7 +49,7 @@ public class Person implements Serializable {
     //default constructor
     public Person() { }
 
-    public Person(String login, String password, String username, String email, String accountType, int balance, int ranking, int hp, int sp) {
+    public Person(String login, String password, String username, String email, String accountType, int balance, int ranking, int hp, int sp, int avatar) {
         this.login = login;
         this.password = password;
         this.username = username;
@@ -56,6 +59,7 @@ public class Person implements Serializable {
         this.ranking = ranking;
         this.hp = hp;
         this.sp = sp;
+        this.avatar = avatar;
     }
 
     //getters and setters
@@ -138,6 +142,14 @@ public class Person implements Serializable {
 
     public void setSp(int sp) {
         this.sp = sp;
+    }
+
+    public int getAvatar(){
+        return avatar;
+    }
+
+    public void setAvatar(int avatar){
+        this.avatar = avatar;
     }
 
     public List<PersonPersona> getPersonPersonas() {

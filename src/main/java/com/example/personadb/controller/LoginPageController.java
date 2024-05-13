@@ -44,7 +44,11 @@ public class LoginPageController {
 
     private void openCeratingCharaceter() {
         try{
-        Parent root = FXMLLoader.load(getClass().getResource("/com/example/personadb/create_character_page.fxml"));
+            Parent root;
+            if(Database.getPerson().getHp() != 0 || Database.getPerson().getSp() != 0 || Database.getPerson().getAvatar() != 0)
+                root = FXMLLoader.load(getClass().getResource("/com/example/personadb/user_menu.fxml"));
+            else
+                root = FXMLLoader.load(getClass().getResource("/com/example/personadb/create_character_page.fxml"));
 
         FadeTransition fadeIn = new FadeTransition(Duration.millis(1000), root);
         fadeIn.setFromValue(0.0);
@@ -60,7 +64,7 @@ public class LoginPageController {
     @FXML
     private void handleLogin(ActionEvent event) throws InterruptedException {
         Person person = new Person();
-        person.setUsername(username.getText());
+        person.setLogin(username.getText());
         //hashing password
         String sha256hex = Hashing.sha256()
                 .hashString(password.getText(), StandardCharsets.UTF_8)

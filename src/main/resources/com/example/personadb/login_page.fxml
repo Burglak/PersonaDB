@@ -26,7 +26,7 @@
    <center>
       <AnchorPane fx:id="content_area" prefHeight="500.0" prefWidth="320.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField fx:id="username" layoutX="60.0" layoutY="167.0" onAction="#exit" prefHeight="27.0" prefWidth="220.0" promptText="Username" style="-fx-background-color: transparent; -fx-border-color: #1ab1ed; -fx-border-width: 0px 0px 2px 0px;" />
+            <TextField fx:id="username" layoutX="60.0" layoutY="167.0" onAction="#exit" prefHeight="27.0" prefWidth="220.0" promptText="Login" style="-fx-background-color: transparent; -fx-border-color: #1ab1ed; -fx-border-width: 0px 0px 2px 0px;" />
             <PasswordField fx:id="password" layoutX="60.0" layoutY="209.0" prefHeight="27.0" prefWidth="220.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #1ab1ed; -fx-border-width: 0px 0px 2px 0px;" />
             <Label layoutX="57.0" layoutY="53.0" text="PersonaDB">
                <font>

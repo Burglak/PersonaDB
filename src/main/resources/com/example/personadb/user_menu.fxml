@@ -3,52 +3,93 @@
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" fx:controller="com.example.personadb.controller.UserMenuController" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="content_area" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0" prefWidth="600.0" style="-fx-background-image: url('file:C:/Cyprian/Java/PersonaDB/src/main/resources/menu22.gif'); -fx-background-size: cover;" stylesheets="@../../../styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.personadb.controller.UserMenuController">
+   <!-- Right Side -->
    <right>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <FontAwesomeIcon glyphName="USER" layoutX="149.0" layoutY="35.0" size="2em" text="" />
-            <Label layoutX="66.0" layoutY="17.0" text="Burglak">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="89.0" opacity="0.4" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+            <Label fx:id="username" layoutX="90.0" layoutY="14.0">
                <font>
-                  <Font name="BM space A9" size="12.0" />
+                  <Font name="BM space A9" size="13.0" />
                </font>
             </Label>
-            <FontAwesomeIcon glyphName="GEAR" layoutX="168.0" layoutY="382.0" size="2em" />
-            <Label layoutX="66.0" layoutY="49.0" prefHeight="17.0" prefWidth="121.0" text="100HP / 80SP">
+            <Label fx:id="stats" layoutX="90.0" layoutY="46.0" prefHeight="25.0" prefWidth="95.0">
                <font>
-                  <Font name="BM space A9" size="9.0" />
+                  <Font name="BM space A9" size="10.0" />
                </font>
             </Label>
-            <FontAwesomeIcon glyphName="PLAY" layoutX="100.0" layoutY="324.0" size="2em" />
-            <FontAwesomeIcon glyphName="STOP" layoutX="66.0" layoutY="324.0" size="2em" />
-            <FontAwesomeIcon glyphName="PAUSE" layoutX="127.0" layoutY="324.0" size="2em" />
-            <Pane layoutY="217.0" prefHeight="65.0" prefWidth="200.0" style="-fx-background-color: #1ab1ed;">
+            <Pane layoutY="89.0" prefHeight="102.0" prefWidth="200.0" stylesheets="@../../../styles.css">
                <children>
-                  <Label layoutX="12.0" layoutY="6.0" prefHeight="17.0" prefWidth="173.0" text="Burn my dread" />
-                  <Pane layoutX="12.0" layoutY="29.0" prefHeight="8.0" prefWidth="169.0" style="-fx-background-color: red;" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="102.0" opacity="0.4" stroke="BLACK" strokeType="INSIDE" width="200.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#88bdef" height="28.0" layoutX="8.0" layoutY="9.0" stroke="BLACK" strokeType="INSIDE" width="181.0" />
+                  <Label layoutX="14.0" layoutY="15.0" prefHeight="17.0" prefWidth="173.0" text="Burn my dread">
+                     <font>
+                        <Font name="BM space A9" size="10.0" />
+                     </font></Label>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="21.0" layoutX="12.0" layoutY="45.0" stroke="BLACK" strokeType="INSIDE" width="178.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#125b9f" height="21.0" layoutX="8.0" layoutY="45.0" stroke="BLACK" strokeType="INSIDE" width="142.0" />
+                  <Button layoutX="83.0" layoutY="70.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="29.0" style="-fx-border-width: 0px;">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="PLAY" />
+                     </graphic>
+                  </Button>
+                  <Button layoutX="50.0" layoutY="70.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="29.0" style="-fx-border-width: 0px;">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="STOP" />
+                     </graphic>
+                  </Button>
+                  <Button layoutX="114.0" layoutY="70.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="29.0" style="-fx-border-width: 0px;">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="PAUSE" />
+                     </graphic>
+                  </Button>
+                  <Button layoutX="146.0" layoutY="70.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="29.0" style="-fx-border-width: 0px;">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="FORWARD" />
+                     </graphic>
+                  </Button>
+                  <Button layoutX="16.0" layoutY="70.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="29.0" style="-fx-border-width: 0px;">
+                     <graphic>
+                        <FontAwesomeIcon glyphName="BACKWARD" />
+                     </graphic>
+                  </Button>
                </children>
             </Pane>
+            <ImageView fx:id="avatar" fitHeight="65.0" fitWidth="65.0" layoutX="14.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../avatars/mona.jpg" />
+               </image>
+            </ImageView>
+            <Button layoutX="65.0" layoutY="347.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="58.0" text="Quit" />
+            <Button layoutX="123.0" layoutY="347.0" mnemonicParsing="false" text="Log out" />
          </children>
       </AnchorPane>
    </right>
-   <left>
-      <AnchorPane prefHeight="400.0" prefWidth="321.0" BorderPane.alignment="CENTER">
+   <center>
+      <AnchorPane fx:id="anchor" maxHeight="500.0" prefHeight="395.0" prefWidth="437.0" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="23.0" layoutY="80.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="115.0" text="Compedium" />
-            <Button layoutX="23.0" layoutY="114.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="115.0" text="Fusion" />
-            <Button layoutX="19.0" layoutY="147.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="124.0" text="Buy" />
-            <Button layoutX="17.0" layoutY="45.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="127.0" style="-fx-background-color: #d1d1d1; -fx-border-color: black; -fx-border-width: 0px 0px 0px 2px;" text="Team" />
-            <Button layoutX="22.0" layoutY="188.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="118.0" text="Sell" />
-            <Button layoutX="22.0" layoutY="222.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="116.0" text="Leaderboard" />
-            <Button layoutX="22.0" layoutY="361.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="58.0" text="Quit" />
-            <Button layoutX="81.0" layoutY="361.0" mnemonicParsing="false" text="Log out" />
+            <Button layoutX="23.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="115.0" styleClass="button" text="Team" />
+            <Button layoutX="23.0" layoutY="49.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="115.0" styleClass="button" text="Compendium" />
+            <Button layoutX="23.0" layoutY="84.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="115.0" styleClass="button" text="Fusion" />
+            <Button layoutX="23.0" layoutY="119.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="115.0" styleClass="button" text="Buy" />
+            <Button layoutX="23.0" layoutY="154.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="115.0" styleClass="button" text="Sell" />
+            <Button layoutX="23.0" layoutY="189.0" mnemonicParsing="false" onAction="#showLeaderboard" prefHeight="25.0" prefWidth="115.0" styleClass="button" text="Leaderboard" />
+            <Button layoutX="23.0" layoutY="345.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="41.0" style="-fx-border-width: 0px;">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="GEAR" size="2em" />
+               </graphic>
+            </Button>
+            <Button layoutX="357.0" layoutY="10.0" mnemonicParsing="false" onAction="#showPersona" prefHeight="35.0" prefWidth="35.0" style="-fx-border-width: 0px;" />
          </children>
       </AnchorPane>
-   </left>
+   </center>
 </BorderPane>

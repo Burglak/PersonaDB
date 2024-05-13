@@ -36,20 +36,36 @@ public class Database {
         sessionFactory.close();
     }
 
-    public static void registerPerson(Person person) {
+    public static boolean registerPerson(Person person) {
+        List<Person> personList = session.createQuery("FROM Person WHERE login = '" + person.getLogin() + "'").list();
+        if(personList.size() > 0){
+            return false;
+        }
         session.beginTransaction();
         session.save(person);
+        session.getTransaction().commit();
+        return true;
+    }
+
+    public static void updatePerson(Person person){
+        session.beginTransaction();
+        session.update(person);
         session.getTransaction().commit();
     }
 
     public static boolean loginPerson(Person person) {
         session.beginTransaction();
-        List<Person> persons = session.createQuery("FROM Person WHERE username = '" + person.getUsername() + "' AND password = '" + person.getPassword() + "'").list();
+        List<Person> persons = session.createQuery("FROM Person WHERE login = '" + person.getLogin() + "' AND password = '" + person.getPassword() + "'").list();
         session.getTransaction().commit();
         if (persons.size() > 0) {
             person = persons.get(0);
+            Database.person = person;
             return true;
         }
         return false;
+    }
+
+    public static Person getPerson(){
+        return person;
     }
 }

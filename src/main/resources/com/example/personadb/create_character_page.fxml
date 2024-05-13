@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.personadb.controller.CreateCharacterPageController">
+<BorderPane fx:id="content_area" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.personadb.controller.CreateCharacterPageController">
    <center>
       <AnchorPane fx:id="anchor" prefHeight="500.0" prefWidth="700.0" BorderPane.alignment="CENTER">
          <children>
@@ -39,7 +39,7 @@
                   <Font name="BM space A9" size="36.0" />
                </font>
             </Label>
-            <Button layoutX="773.0" layoutY="447.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="67.0" style="-fx-background-color: #1ab1ed; -fx-border-color: white; -fx-border-width: 0px 2px 0px 0px;" text="Next" textFill="WHITE">
+            <Button layoutX="773.0" layoutY="447.0" mnemonicParsing="false" onAction="#next" prefHeight="30.0" prefWidth="67.0" style="-fx-background-color: #1ab1ed; -fx-border-color: white; -fx-border-width: 0px 2px 0px 0px;" text="Next" textFill="WHITE">
                <font>
                   <Font name="BM space A9" size="13.0" />
                </font>

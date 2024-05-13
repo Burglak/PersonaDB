@@ -2,23 +2,15 @@ package com.example.personadb;
 
 import com.example.personadb.controller.LoadingPanel;
 import javafx.animation.PauseTransition;
-import com.example.personadb.model.*;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.chart.PieChart;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.hibernate.cfg.Configuration;
 
 import java.io.IOException;
-import java.util.List;
 
 public class App extends Application {
     private double xOffset = 0;
@@ -28,7 +20,7 @@ public class App extends Application {
     public void start(Stage stage) throws Exception {
         primaryStage = stage;
         stage.initStyle(StageStyle.UNDECORATED); //remove title bar
-        // Load and show the loading panel
+        // Load jand show the loading panel
         FXMLLoader loader = new FXMLLoader(getClass().getResource("loading_panel.fxml"));
         Parent loadingRoot = loader.load();
         Scene loadingScene = new Scene(loadingRoot);
