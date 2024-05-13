@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Polygon?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="borderPane" maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" snapToPixel="false" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.personadb.controller.PersonaPanelController">
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="387.0" fitWidth="654.0" layoutX="-35.0" layoutY="24.0" opacity="0.8" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../persona_background.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0c2587" height="48.0" layoutX="28.0" layoutY="127.0" rotate="-12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="360.0" />
+            <ImageView fitHeight="105.0" fitWidth="360.0" layoutX="24.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true" rotate="-12.0">
+               <image>
+                  <Image url="@../../../affinities.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="102.0" layoutX="-41.0" layoutY="-6.0" strokeType="INSIDE" style="-fx-rotate: -12;" width="666.0">
+               <stroke>
+                  <LinearGradient endX="0.006309148264984188" startY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+               <fill>
+                  <LinearGradient endX="0.43533119418267574" endY="0.27760242738934343" startX="1.0" startY="0.9022081958758719">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.6512345671653748" green="0.9011831283569336" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#002b4e" height="200.0" layoutX="-205.0" layoutY="-156.0" stroke="#ff2727" strokeType="INSIDE" strokeWidth="2.0" style="-fx-rotate: -12;" width="547.0" />
+            <Button layoutX="19.0" layoutY="73.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" rotate="168.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../fast-forward.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="16.0" layoutY="14.0" prefHeight="17.0" prefWidth="133.0" style="-fx-rotate: -12;" text="Burglak" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="13.0" />
+               </font>
+            </Label>
+            <Button layoutX="327.0" layoutY="18.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" rotate="-12.0" style="-fx-background-color: transparent;" />
+            <ImageView fitHeight="43.0" fitWidth="43.0" layoutX="291.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" rotate="-12.0">
+               <image>
+                  <Image url="@../../../fast-forward.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="95.0" layoutY="44.0" rotate="-12.0" text="ARCANA" textFill="#bababa">
+               <font>
+                  <Font name="Arial Black" size="8.0" />
+               </font>
+            </Label>
+            <Label layoutX="95.0" layoutY="48.0" rotate="-12.0" text="STRENGTH" textFill="#bababa">
+               <font>
+                  <Font name="Arial Black" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="95.0" layoutY="79.0" rotate="-12.0" text="IZANAGI">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="95.0" layoutY="112.0" rotate="-12.0" text="LV">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="119.0" layoutY="101.0" rotate="-12.0" text="35">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="350.0" fitWidth="350.0" layoutX="237.0" layoutY="78.0" opacity="0.71" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../izanagi.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="-1.0" contrast="1.0" />
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="350.0" fitWidth="350.0" layoutX="254.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../izanagi.png" />
+               </image>
+            </ImageView>
+            <Polygon layoutX="564.0" layoutY="304.0" opacity="0.9" points="-192.99998474121094, 91.43055725097656, 50.0, 40.0, 50.0, -72.21395874023438, -192.99998474121094, -18.213958740234375" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+               <fill>
+                  <LinearGradient endX="0.01892744479495268" endY="0.886435331230284" startX="0.3091482770179725" startY="0.8643533002690938">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color green="0.1921568661928177" blue="0.3686274588108063" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.49796747967479676">
+                           <color>
+                              <Color red="0.007716049440205097" green="0.22924382984638214" blue="0.5" opacity="0.8600000143051147" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.12999999523162842" green="0.5214999914169312" blue="1.0" opacity="0.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Polygon>
+            <Label layoutX="400.0" layoutY="280.0" rotate="-12.0" text="Str" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="400.0" layoutY="300.0" rotate="-12.0" text="Ma" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="400.0" layoutY="320.0" rotate="-12.0" text="En" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="400.0" layoutY="340.0" rotate="-12.0" text="Ag" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="400.0" layoutY="360.0" rotate="-12.0" text="Lu" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#011d38" height="8.0" layoutX="455.0" layoutY="262.0" rotate="-12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" />
+            <Label layoutX="430.0" layoutY="275.0" rotate="-12.0" text="30" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="430.0" layoutY="295.0" rotate="-12.0" text="20" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="430.0" layoutY="315.0" rotate="-12.0" text="27" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="430.0" layoutY="335.0" rotate="-12.0" text="41" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="430.0" layoutY="355.0" rotate="-12.0" text="38" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="14.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#011d38" height="8.0" layoutX="455.0" layoutY="282.0" rotate="-12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#011d38" height="8.0" layoutX="455.0" layoutY="302.0" rotate="-12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#011d38" height="8.0" layoutX="455.0" layoutY="322.0" rotate="-12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#011d38" height="8.0" layoutX="455.0" layoutY="342.0" rotate="-12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2e82d0" height="8.0" layoutX="456.0" layoutY="274.0" rotate="-12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="45.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2e82d0" height="8.0" layoutX="456.0" layoutY="295.0" rotate="-12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2e82d0" height="8.0" layoutX="456.0" layoutY="315.0" rotate="-12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="40.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2e82d0" height="8.0" layoutX="456.0" layoutY="332.0" rotate="-12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="61.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2e82d0" height="8.0" layoutX="456.0" layoutY="352.0" rotate="-12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="57.0" />
+            <Label layoutX="28.0" layoutY="136.0" prefHeight="29.0" prefWidth="359.0" rotate="-12.0" text="   .        .       .      .       .       .      ." textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="20.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00315e" height="180.0" layoutX="20.0" layoutY="220.0" opacity="0.8" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="320.0" />
+            <Rectangle arcHeight="5.0" fill="#346188" height="40.0" layoutX="30.0" layoutY="230.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" />
+            <Rectangle arcHeight="5.0" fill="#00315e" height="40.0" layoutX="180.0" layoutY="230.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" />
+            <Rectangle arcHeight="5.0" fill="#00315e" height="40.0" layoutX="30.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" />
+            <Rectangle arcHeight="5.0" fill="#346188" height="40.0" layoutX="180.0" layoutY="270.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" />
+            <Rectangle arcHeight="5.0" fill="#346188" height="40.0" layoutX="30.0" layoutY="310.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" />
+            <Rectangle arcHeight="5.0" fill="#00315e" height="40.0" layoutX="30.0" layoutY="350.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" />
+            <Rectangle arcHeight="5.0" fill="#00315e" height="40.0" layoutX="180.0" layoutY="310.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" />
+            <Rectangle arcHeight="5.0" fill="#346188" height="40.0" layoutX="180.0" layoutY="350.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" />
+            <Label layoutX="216.0" layoutY="237.0" text="- NONE -" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="214.0" layoutY="276.0" text="- NONE -" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="214.0" layoutY="318.0" text="- NONE -" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="214.0" layoutY="356.0" text="- NONE -" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="64.0" layoutY="356.0" text="- NONE -" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="65.0" layoutY="318.0" text="- NONE -" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="32.0" fitWidth="31.0" layoutX="33.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../strength-aff.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="79.0" layoutY="237.0" text="Slash" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="32.0" fitWidth="31.0" layoutX="33.0" layoutY="275.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../strength-aff.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="75.0" layoutY="277.0" text="Rakukaja" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="17.0" />
+               </font>
+            </Label>
+            <Button layoutX="530.0" layoutY="48.0" mnemonicParsing="false" rotate="180.0" style="-fx-background-color: transparent;" />
+            <ImageView fitHeight="50.0" fitWidth="49.0" layoutX="560.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+               <image>
+                  <Image url="@../../../arrow.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

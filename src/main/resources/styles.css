@@ -1,0 +1,32 @@
+/* Styl dla BorderPane */
+#borderPane {
+    -fx-background-image: url('C:\Cyprian\Java\PersonaDB\src\main\resources\menu22.gif');
+    -fx-background-size: cover;
+/* -fx-background-size: auto auto; /* Automatyczne dopasowanie rozmiaru obrazu */
+/* -fx-background-repeat: repeat-x;
+/* -fx-background-position: -200px top; /* Początkowy pozycjonowanie obrazu */
+}
+
+.button {
+    -fx-background-color: rgba(0, 102, 204, 0.7); /* Kolor tła z alfą */
+    -fx-text-fill: #ffffff;
+    -fx-padding: 5px 10px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease;
+    -fx-alignment: center-left;
+}
+
+.button:hover {
+    -fx-background-color: rgba(0, 51, 102, 0.7); /* Kolor tła po najechaniu z alfą */
+}
+
+.button:pressed {
+    -fx-background-color: #ff0000;
+}
+
+/* Tylko lewe obramowanie */
+.button {
+    -fx-border-color: transparent transparent transparent #ffffff;
+    -fx-border-width: 0px 0px 0px 2px;
+}
